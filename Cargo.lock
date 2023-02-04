@@ -509,6 +509,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "secp256k1",
+ "tokio",
  "web3",
 ]
 
