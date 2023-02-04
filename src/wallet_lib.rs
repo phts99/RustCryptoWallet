@@ -12,3 +12,7 @@ pub fn create_keypair() -> Result<(SecretKey, PublicKey)> {
     Ok(secp.generate_keypair(&mut rng))
 }
 
+pub fn establish_web3_connection(url: &str) -> Result<Web3<Http>> {
+    let transport: Http = Http::new(url)?;
+    Ok(web3::Web3::new(transport))
+}
