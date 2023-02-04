@@ -17,7 +17,7 @@ pub fn establish_web3_connection(url: &str) -> Result<Web3<Http>> {
     Ok(web3::Web3::new(transport))
 }
 
-pub async fn sign_and_end(web3: Web3<Http>, tx_object: TransactionParameters, seckey: SecretKey) -> Result<H256> {
-    let signed = web3.accounts().sign_transaction(tx_object, &seckey).await?;
+pub async fn sign_and_send(web3: Web3<Http>, transaction_object: TransactionParameters, seckey: SecretKey) -> Result<H256> {
+    let signed = web3.accounts().sign_transaction(transaction_object, &seckey).await?;
     Ok(web3.eth().send_raw_transaction(signed.raw_transaction).await?)
 }
