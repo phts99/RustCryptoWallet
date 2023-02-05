@@ -26,29 +26,29 @@ async fn main() {
     let mut btn_send: Button = Button::new(200, 300, 100, 35, "SEND");
     let mut input1: Input = Input::new(200, 200, 225, 35, "To: ");
     let mut frame: Frame = Frame::default()
-                                    // .center_of(&window)
                                     .with_size(600, 300)
                                     .with_label("0 Wallets");
-
-    window.set_color(Color::DarkCyan);
-
-    btn_create_wallet.set_color(Color::White);
-    btn_create_wallet.set_label_color(Color::DarkMagenta);
-    btn_create_wallet.set_label_font(Font::TimesBold);
-    btn_create_wallet.set_frame(FrameType::FlatBox);
-    btn_create_wallet.clear_visible_focus();
-
-    btn_send.set_color(Color::White);
-    btn_send.set_label_color(Color::DarkMagenta);
-    btn_send.set_label_font(Font::TimesBold);
-    btn_send.set_frame(FrameType::FlatBox);
-    btn_send.clear_visible_focus();
-
-    input1.set_frame(FrameType::FlatBox);
-
-    frame.set_label_color(Color::White);
-    frame.set_label_font(Font::TimesBold);
-    frame.set_label_size(24);
+    {
+        window.set_color(Color::DarkCyan);
+        
+        btn_create_wallet.set_color(Color::White);
+        btn_create_wallet.set_label_color(Color::DarkMagenta);
+        btn_create_wallet.set_label_font(Font::TimesBold);
+        btn_create_wallet.set_frame(FrameType::FlatBox);
+        btn_create_wallet.clear_visible_focus();
+        
+        btn_send.set_color(Color::White);
+        btn_send.set_label_color(Color::DarkMagenta);
+        btn_send.set_label_font(Font::TimesBold);
+        btn_send.set_frame(FrameType::FlatBox);
+        btn_send.clear_visible_focus();
+        
+        input1.set_frame(FrameType::FlatBox);
+        
+        frame.set_label_color(Color::White);
+        frame.set_label_font(Font::TimesBold);
+        frame.set_label_size(24);
+    }
 
     window.end();
     window.show();
