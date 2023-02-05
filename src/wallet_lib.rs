@@ -3,7 +3,7 @@ use secp256k1::{
     rand::{rngs, SeedableRng},
     PublicKey, SecretKey,
 };
-use web3::{self, Web3, transports::Http, types::{TransactionParameters, Res, H256, U256, H160}};
+use web3::{self, Web3, transports::Http, types::{TransactionParameters, H256, U256, H160}};
 
 pub fn create_keypair() -> Result<(SecretKey, PublicKey)> {
     let secp = secp256k1::Secp256k1::new();
